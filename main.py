@@ -19,7 +19,9 @@ def apply_discount(price, discount):
 def update_stock(products, product_name, amount):
     for product in products:
         if product["name"] == product_name:
-            product["stock"] = product["stock"] + amount
+            product["stock"] = product["stock"] - amount
+            if product['stock'] <= 0:
+                return 1
     return product
 
 
