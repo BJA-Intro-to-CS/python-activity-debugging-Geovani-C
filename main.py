@@ -21,7 +21,7 @@ def update_stock(products, product_name, amount):
         if product["name"] == product_name:
             product["stock"] = product["stock"] - amount
             if product['stock'] <= 0:
-                return 1
+                product['stock'] = 1
     return product
 
 
