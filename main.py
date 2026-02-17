@@ -6,7 +6,7 @@
 def calculate_total_price(products):
     total = 0
     for item in products:
-        total += item["price"]
+        total = total + item["price"]
     return total
 
 
@@ -51,7 +51,7 @@ print("Discounted price:", discounted)
 
 
 print("Updating stock...")
-update_stock(products, "Notebook", 5)
+products = update_stock(products, "Notebook", 5)
 print(products)
 
 
